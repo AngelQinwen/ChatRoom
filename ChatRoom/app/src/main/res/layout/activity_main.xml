@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/skyimage6"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/emoji_button"
+        android:padding="4dp"
+        android:src="@drawable/smileface4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+   <ImageButton
+       android:id="@+id/send"
+       android:layout_width="40dp"
+       android:layout_height="40dp"
+       android:layout_alignParentEnd="true"
+       android:layout_alignParentRight="true"
+       android:layout_alignParentBottom="true"
+       android:background="@drawable/ic_send2"/>
+
+
+    <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+        android:id="@+id/messageBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/emoji_button"
+        android:layout_toLeftOf="@+id/send"
+        android:hint="Enter a message..."
+        app:emojiconSize="28sp"
+        android:padding="5dp"
+
+
+        />
+
+
+
+    <!--<EditText-->
+        <!--android:id="@+id/messageBox"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="Enter a message..."-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_toLeftOf="@+id/send"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:padding="7dp"/>-->
+
+    <ListView
+        android:id="@+id/messageList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above = "@id/messageBox"
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+
+
+        />
+
+
+
+
+
+</RelativeLayout>
